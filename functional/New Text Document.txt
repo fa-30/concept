@@ -1,0 +1,17 @@
+
+(*let addTask (description: string) (dueDate: DateTime) (priority: int) (status: TaskStatus) =
+    let json = File.ReadAllText(jsonFilePath)
+    let mutable taskList: Task list = JsonConvert.DeserializeObject<Task list>(json)
+    let mutable nextTaskId: int =taskList|> List.map (fun t -> t.TaskId) |> List.max |> (+) 1
+    let newTask = { TaskId = nextTaskId; Description = description; DueDate = dueDate; Priority = priority; Status = status }
+    taskList <- newTask :: taskList
+    nextTaskId <- nextTaskId + 1
+    saveTasks (taskList) // Save the updated task list to JSON
+*)
+
+
+Description: cray, Due Date: 2023-02-01, Priority: 6, Status: Pending
+ID: 4, Description: have fun, Due Date: 2025-02-12, Priority: 3, Status: Pending
+ID: 3, Description: cook, Due Date: 2023-02-01, Priority: 4, Status: Overdue
+ID: 2, Description: course, Due Date: 2024-12-03, Priority: 1, Status: Pending
+ID: 1, Description: finsh project , Due Date: 2024-12-05, Priority: 1, Status: Pending
